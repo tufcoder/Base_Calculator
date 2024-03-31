@@ -1,48 +1,64 @@
 <!DOCTYPE html>
-    <html>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        <head>
-            <title> Base Calculator </title>
-        </head>
-        <body>
-            <header>
-                <div>
-                    <h1>Base Calculator</h1>
-                </div>
-            </header>
-            <div class="container">
-                <form class="form">
-                    <p class="text_next_tooltip">Enter the base here:
-                        <div class="tooltip">?<span class="tooltiptext">
-                            Important:
-                            the base must not have repeated characters and also contain only characters between 0 to 9 and/or A to Z.
-                            Examples: 01234 or abcde
-                        </span></div>
-                    </p>
-                    <input class="textbox" type="text" placeholder="insert a base" id="base_input" name="TextBox1">
-                </form>
-                <form class="form">
-                    <p class="text_next_tooltip">Enter the number in base 10 to convert:
-                        <div class="tooltip">?<span class="tooltiptext">A decimal base number can only consist of digits between: 0123456789</span></div>
-                    </p>
-                    <input class="textbox" type="text" placeholder="insert a number in decimal base" id="number_input" name="TextBox2">
-                </form>
-                <button class="button" type="button" onclick="main()">Calculate</button>
-                <form class="form">
-                    <p>Result:</p>
-                    <input class="textbox" type="text" placeholder="the result will be shown here" id="result" name="TextBox3">
-                </form>
-            </div>
-        </body>
-        <footer class="footer">
-            <p>Developed by: 
-                 <a href="https://github.com/juliobillet">Júlio Billet</a> 
-                 with the awesome help of my friends 
-                <a href="https://github.com/GMarroquio">Guilherme Marroquio</a>
-                and
-                <a href="https://github.com/daniel-srj">Daniel Sóstenes</a>.
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Base Calculator </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <script type="text/javascript" src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Base Calculator</h1>
+    </header>
+    <form class="container">
+        <div>
+            <p class="text_next_tooltip">
+                Enter the base here:
             </p>
-        </footer>
-        <script type="text/javascript" src="main.js"></script>
-    </html>
+            <div class="tooltip">
+                ?
+                <span class="tooltiptext">
+                    Important:
+                    the base must not have repeated characters and also contain only characters between 0 to 9 and/or A
+                    to Z.
+                    Examples: 01234 or abcde
+                </span>
+            </div>
+        </div>
+        <input type="text" class="textbox" id="base_input" name="TextBox1" placeholder="insert a base" />
+        <div>
+            <p class="text_next_tooltip">
+                Enter the number in base 10 to convert:
+            </p>
+            <div class="tooltip">
+                ?
+                <span class="tooltiptext">
+                    A decimal base number can only consist of digits between:
+                    0123456789
+                </span>
+            </div>
+        </div>
+        <input type="text" class="textbox" id="number_input" name="TextBox2"
+            placeholder="insert a number in decimal base" />
+        <button type="button" class="button" onclick="main()">
+            Calculate
+        </button>
+        <p>Result:</p>
+        <input type="text" class="textbox" id="result" name="TextBox3" placeholder="the result will be shown here" />
+    </form>
+    <footer class="footer">
+        <p>Developed by:
+            <a href="https://github.com/juliobillet">Júlio Billet</a>
+            with the awesome help of my friends
+            <a href="https://github.com/GMarroquio">Guilherme Marroquio</a>
+            and
+            <a href="https://github.com/daniel-srj">Daniel Sóstenes</a>.
+        </p>
+    </footer>
+</body>
+
+</html>

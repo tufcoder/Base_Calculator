@@ -1,5 +1,6 @@
 "use strict";
 let g_final_result = "";
+
 function is_valid_base(base_input) {
     if (base_input.length < 2)
         return false;
@@ -11,6 +12,7 @@ function is_valid_base(base_input) {
         return false;
     return true;
 }
+
 function is_valid_number(input) {
     if (input.includes('.'))
         return false;
@@ -18,6 +20,7 @@ function is_valid_number(input) {
         return false;
     return !isNaN(Number(input));
 }
+
 function calculate_base(base_input, number) {
     if (number < 0) {
         g_final_result = g_final_result + "-";
@@ -33,6 +36,7 @@ function calculate_base(base_input, number) {
     }
     return g_final_result;
 }
+
 function main() {
     const base_input = document.getElementById("base_input").value;
     const number_input = document.getElementById("number_input").value;
